@@ -56,3 +56,4 @@ accuracy = accuracy_score(labels_test, pred)
 print accuracy  
 print "another way to do it with score function"  
 print clf.score(features_test, labels_test)
+
