@@ -30,4 +30,18 @@ features_train, features_test, labels_train, labels_test = preprocess()
 
 #########################################################
 
+from sklearn.naive_bayes import GaussianNB
+#create the classifier
+clf = GaussianNB()
+# populate with the training set
+clf.fit(features_train,labels_train)
+# the prediction should predict the label
+pred = clf.predict(features_test)
+print pred
 
+#Calculate the accuracy
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(labels_test, pred)
+print accuracy  
+print "another way to do it with score function"  
+print clf.score(features_test, labels_test)
