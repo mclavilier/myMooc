@@ -33,11 +33,22 @@ features_train, features_test, labels_train, labels_test = preprocess()
 from sklearn.naive_bayes import GaussianNB
 #create the classifier
 clf = GaussianNB()
+
+#Define T0
+t0 = time()
+### t0 will measure the training time
+
 # populate with the training set
 clf.fit(features_train,labels_train)
+
+print "the training time is: ", round(time()-t0,3), "s"
+
+#Define t1 to measure predicting time
+t1 = time()
 # the prediction should predict the label
 pred = clf.predict(features_test)
-print pred
+print "the predict time is: ", round(time()-t1,3), "s"
+print "the prediction is: ",pred
 
 #Calculate the accuracy
 from sklearn.metrics import accuracy_score
