@@ -98,7 +98,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 # As we have to not use NLTK, the sklearn stop_words is used.
  
-vectorizer = TfidfVectorizer(stop_words=sw)
+vectorizer = TfidfVectorizer(stop_words="english")
 bag_words = vectorizer.fit_transform(word_data)
 # bag_words = vectorizer.transform(word_data)
 print len(vectorizer.get_feature_names())
