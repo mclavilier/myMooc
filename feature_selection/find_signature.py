@@ -31,7 +31,8 @@ features_train = vectorizer.fit_transform(features_train)
 features_test  = vectorizer.transform(features_test)
 #.toarray()
 
-print word_data
+print vectorizer.get_feature_names()[14343]
+#print word_data
 
 ### a classic way to overfit is to use a small number
 ### of data points and a large number of features;
@@ -48,4 +49,16 @@ clf.fit(features_train,labels_train)
 print clf.score(features_test,labels_test)
 
 importances = clf.feature_importances_
-print importances
+#print importances
+#i = 0
+#for name, importance in sorted(zip(features_train.columns, clf.feature_importances_), reverse=True):
+#    if i < 20:
+#        print(name, importance)
+#    i += 1
+
+import numpy as np
+# sorting the ndarray via numpy
+indices = np.argsort(importances)[::-1]
+print 'Feature Ranking: '
+for i in range(20):
+    print "{} feature no.{} ({})".format(i+1,indices[i],importances[indices[i]])
