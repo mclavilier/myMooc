@@ -1,0 +1,14 @@
+Books : 
+=========
+Manipulation de données avec Pandas, Numpy et iPython : Wes McKinney (isbn 978-2-212-14109-2)
+Apprenez à programmer en Python - Vincent Le Goff ( isbn 979-10-90085-77-0)
+
+
+
+Web Sites :
+==========
+www.stackoverflow.com
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html
+https://en.wikipedia.org/wiki/Enron
+https://www.cs.cmu.edu/~enron/
+https://www.geeksforgeeks.org/removing-stop-words-nltk-python/
